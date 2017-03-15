@@ -1,0 +1,53 @@
+div#login{
+    /*padding-top: 20px;*/
+    top: 0px;
+    background-color: #999999;
+    width: 250px;
+    border-top:2.5px solid #30C;
+    border-right:1px;
+    border-left:1px;
+    box-shadow:1px 1px 1px #FFF;
+}
+
+.button
+{
+    /*//float:right;*/
+    border:none;
+    width: 175px;
+    background-color:#09F;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size:14px;
+    color:#FFF;
+}
+
+.button:hover
+{
+    width: 175px;
+    border:none;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background-color:#FFF;
+    font-size:14px;
+    color:#09F;
+    box-shadow:0 1px 3px #FFF;
+}
+
+.h1lgn {
+    margin: 0px !important;
+    font-family: 'Palatino Linotype';
+    color: white;
+    background-color: #09F;
+    text-align: center;
+}
+
+.formClass{
+    text-align: center;
+    color: white;
+    padding-top: 22px;
+}
+
+.centerClass{
+    left: 50%;
+    position: absolute;
+    top: 50% !important;
+    transform: translate(-50%,-50%);
+}

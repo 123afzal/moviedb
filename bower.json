@@ -1,0 +1,13 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "latest",
+    "jquery": "~2.2.2",
+    "angular-route": "^1.6.3"
+  },
+  "resolutions": {
+    "angular": "1.5.9"
+  }
+}

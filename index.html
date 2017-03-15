@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
+    <base href="/movieDb/">
     <meta charset="UTF-8">
     <title>Index</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/lgn.css">
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+
+    <script src="public/moduleApp.js"></script>
+    <script src="public/controllers/loginController.js" ></script>
+    <script src="public/controllers/signUpController.js" ></script>
+    <script src="public/controllers/blogController.js" ></script>
+    <script src="public/css/lgn.css"></script>
+
 </head>
-<body>
+<body style="background-color: #0f0f0f">
+
+<!--<ul>-->
+    <!--<li><a href="./">Login</a></li>-->
+    <!--<li><a href="signUp">SignUp</a></li>-->
+    <!--<li><a href="blog">Blog</a></li>-->
+<!--</ul>-->
+
+
+
+    <div ng-view></div>
+
 
 </body>
+
 </html>
