@@ -1,16 +1,22 @@
 <div class="container-fluid" style="margin-top: 10px">
 
+    <!--Elements-->
+    <!--<name></name>-->
+    <!--Attributes-->
+    <!--<div name></div>-->
     <div id="login" class="centerClass">
         <h1 class="h1lgn">Sign Up</h1>
         <form class="formClass">
-            <input type="text" name="fname" placeholder="Enter your First Name"><br><br>
-            <input type="text" name="lname" placeholder="Enter your Last Name"><br><br>
-            <input type="text" name="email" placeholder="Enter your mail"><br><br>
-            <input type="password" name="pass" placeholder="Enter Password"><br><br>
-            <button type="button" class="button">Sign Up</button>
-            <label style="font-family: 'Palatino Linotype'; font-size: 12px">You have an account <a href="./">Login?</a></label>
+            <input type="text" ng-model="user.userName"  placeholder="User name" class="text-center" required><br><br>
+            <input type="text" ng-model="user.email" placeholder="Enter your mail" class="text-center"><br><br>
+            <input type="password" ng-model="user.password" placeholder="Enter Password" class="text-center"><br><br>
+            <button type="button" class="button" ng-click="signup(user)">Sign Up</button>
+            <label style="font-family: 'Palatino Linotype'; font-size: 12px">You have an account <a ui-sref="login">Login?</a></label>
         </form>
     </div>
+
+    {{name}}ghj
+    {{mail}}ghg
 
 </div>
 

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Harry Potter",
+    "description": "Base on pure magic",
+    "releaseDate": "17 March"
+
+  },{
+  "name": "Wolverine",
+  "description": "A man with max healing power",
+  "releaseDate": "29 April"
+
+},{
+  "name": "Pirates of the Carribean",
+  "description": "Oeans",
+  "releaseDate": "31 May"
+
+},{
+  "name": "Intersteller",
+  "description": "Based in black hole concept",
+  "releaseDate": "25 June"
+
+},{
+  "name": "John Wick",
+  "description": "ex-hitman",
+  "releaseDate": "7 Jan"
+
+},{
+  "name": "Shawshank Redemption",
+  "description": "Based on the revenge",
+  "releaseDate": "12 Feb"
+
+},{
+  "name": "Everrest",
+  "description": "Based on real story of everest guide",
+  "releaseDate": "5 Sep"
+}
+]

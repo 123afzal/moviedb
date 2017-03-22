@@ -1,0 +1,25 @@
+<div class="container" style="color: white">
+    <div class="centerClass">
+        <div style="padding: 10px;" class="row" ng-repeat="movie in movies track by $index">
+
+            <div  class="col col-lg-3">{{$index}} {{ movie.name }}
+                <input class="input-bg" ng-model="movie.name" ng-show="isEdit && $index == index" type="text" size="">
+            </div>
+
+            <div class="col col-lg-3">{{ movie.description }}
+                <input class="input-bg" ng-model="movie.description" ng-show="isEdit && $index == index" type="text">
+            </div>
+
+            <div class="col col-lg-3">{{ movie.releaseDate  | date}}
+                <input class="input-bg" ng-model="movie.releaseDate" ng-show="isEdit && $index == index" type="text">
+            </div>
+
+            <div class="col col-lg-3">
+                <button class="btn btn-danger" ng-click="deleteMovie(movie)"> Delete </button>
+                <button class="btn btn-primary" ng-click="upadteMovie(movie,$index)"> Edit </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
