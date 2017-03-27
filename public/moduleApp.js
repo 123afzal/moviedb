@@ -1,10 +1,13 @@
 /**
  * Created by Syed Afzal on 3/14/2017.
  */
-var app = angular.module("myApp",[ 'ui.router']);
+var app = angular.module("myApp",[ 'ui.router','LocalStorageModule']);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(function ($stateProvider, $urlRouterProvider, localStorageServiceProvider) {
     $urlRouterProvider.otherwise("/login");
+
+    localStorageServiceProvider.setStorageType('localStorage');
+
 
     $stateProvider
 
@@ -26,29 +29,4 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controller : 'movieController'
         })
 
-
-
-
-    // $routeProvider
-    //     .when("/", {
-    //         templateUrl:"public/views/login.html",
-    //         controller : "loginController"
-    //     })
-    //
-    //     .when("/signUp",{
-    //         templateUrl:"public/views/signUp.html",
-    //         controller : "signUpController"
-    //     })
-    //
-    //     .when("/blog", {
-    //         templateUrl:"public/views/blog.html",
-    //         controller:"blogController"
-    //     })
-    //
-    //     .otherwise({
-    //         templateUrl:"public/views/login.html",
-    //         controller : "loginController"
-    //     })
-    //
-    // $locationProvider.html5Mode(true);
 });

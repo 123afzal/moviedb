@@ -1,25 +1,81 @@
 <div class="container" style="color: white">
+    <div class="row padding-10 margin-5" >
+        <div class="col col-md-3" >
+            <input  class="input-bg form-control" type="text" size="15" ng-model="searchText.name"  placeholder="search by movie name">
+        </div>
+        <div class="col col-md-6">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal2"> Insert </button>
+        </div>
+    </div>
     <div class="centerClass">
-        <div style="padding: 10px;" class="row" ng-repeat="movie in movies track by $index">
+
+        <div style="padding: 10px;" class="row" ng-repeat="movie in movies | filter : searchText">
 
             <div  class="col col-lg-3">{{$index}} {{ movie.name }}
-                <input class="input-bg" ng-model="movie.name" ng-show="isEdit && $index == index" type="text" size="">
+                <input class="input-bg" ng-model="movie.name" ng-show="isEdit && movie.id == updateId" type="text" size="12">
             </div>
 
             <div class="col col-lg-3">{{ movie.description }}
-                <input class="input-bg" ng-model="movie.description" ng-show="isEdit && $index == index" type="text">
+                <input class="input-bg" ng-model="movie.description" ng-show="isEdit && movie.id == updateId" type="text" size="12">
             </div>
 
             <div class="col col-lg-3">{{ movie.releaseDate  | date}}
-                <input class="input-bg" ng-model="movie.releaseDate" ng-show="isEdit && $index == index" type="text">
+                <input class="input-bg" ng-model="movie.releaseDate" ng-show="isEdit && movie.id == updateId" type="text" size="12">
             </div>
 
-            <div class="col col-lg-3">
+            <div class="col col-lg-2">
                 <button class="btn btn-danger" ng-click="deleteMovie(movie)"> Delete </button>
-                <button class="btn btn-primary" ng-click="upadteMovie(movie,$index)"> Edit </button>
+            </div>
+
+            <div class="col col-lg-1">
+                <button class="btn btn-primary" ng-click="upadteMovie(movie)" data-toggle="modal" data-target="#myModal"> Edit </button>
             </div>
         </div>
+
     </div>
 
 </div>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <input class="margin-5" ng-model="newMovie.name" type="text" placeholder="Movie Name">
+                <input class="margin-5" ng-model="newMovie.description" type="text" placeholder="Description">
+                <input class="margin-5" ng-model="newMovie.releaseDate" type="text" placeholder="Release Date">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="edit(newMovie)" data-dismiss="modal">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <input class="margin-5" ng-model="inMovie.name" type="text" placeholder="Movie Name">
+                <input class="margin-5" ng-model="inMovie.description" type="text" placeholder="Description">
+                <input class="margin-5" ng-model="inMovie.releaseDate" type="text" placeholder="Release Date">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="createMovie(inMovie)" data-dismiss="modal">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
